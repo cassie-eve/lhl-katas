@@ -1,3 +1,5 @@
+// Count each value in a string
+
 const numberOfVowels = function(data) {
   let vowels = 0;
   for (let letter of data) {
