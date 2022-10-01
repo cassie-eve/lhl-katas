@@ -2,7 +2,9 @@
 // Here I've sorted the array from highest to lowest, then added the first 2 indexes of the array
 
 const sumLargestNumbers = function(data) {
-  data.sort(function(a,b){return b - a})
+  data.sort(function(a,b) {
+    return b - a;
+  });
   return (data[0] + data[1]);
 };
 
