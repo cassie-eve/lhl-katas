@@ -1,27 +1,16 @@
-const checkAir = function (samples, threshold) {
-  let clean = 0;
+const checkAir = function(samples, threshold) {
   let dirty = 0;
   for (let sample of samples) {
-    if (sample === 'clean') {
-      clean++;
-    } else {
-      dirty++ 
+    if (sample === 'dirty') {
+      dirty++;
     }
   }
-  if (dirty / clean > threshold) {
-    return 'Polluted'
+  if (dirty / samples.length > threshold) {
+    return 'Polluted';
   } else {
-    return 'Clean'
+    return 'Clean';
   }
 };
-
-    // if (dirty / clean > threshold) {
-      // console.log('dirty: ' + dirty)
-      // console.log('clean: ' + clean)
-      // console.log('dirty/clean: ' + dirty/clean)
-      // console.log('threshold: ' + threshold)
-      // console.log('------------------')
-    //   return 'Polluted';
 
 console.log(checkAir(
   ['clean', 'clean', 'dirty', 'clean', 'dirty', 'clean', 'clean', 'dirty', 'clean', 'dirty'],
@@ -36,4 +25,4 @@ console.log(checkAir(
 console.log(checkAir(
   ['clean', 'dirty', 'clean', 'dirty', 'clean', 'dirty', 'clean'],
   0.9
-))
+));
