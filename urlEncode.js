@@ -1,4 +1,4 @@
-const urlEncode = function(text) {
+const urlEncode = text => {
   let newUrl = '';
   for (let letter of text.trim()) {
     if (letter === ' ') {

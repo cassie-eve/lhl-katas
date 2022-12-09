@@ -1,6 +1,4 @@
-// Sum the two largest numbers of an array
 // Creating a new array without the .sort() function
-
 const sumLargestNumbers = function(data) {
   const newArr = [];
   for (let num of data) {
