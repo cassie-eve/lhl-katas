@@ -1,5 +1,13 @@
 const urlDecode = function(text) {
-  // Put your solution here
+  let obj = {};
+  const pairs = text.split('&');
+  for (let pair of pairs) {
+    let keyValue = pair.split('=');
+    let key = keyValue[0];
+    let value = keyValue[1].replaceAll('%20', ' ');
+    obj[key] = value;
+  }
+  return obj;
 };
 
 console.log(urlDecode("duck=rubber"));
