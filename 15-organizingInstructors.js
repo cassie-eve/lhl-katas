@@ -1,5 +1,14 @@
 const organizeInstructors = function(instructors) {
-  // Put your solution here
+  const courses = {};
+  for (let instructor of instructors) {
+    let course = instructor.course;
+    if (courses[course]) {
+      courses[course].push(instructor.name);
+    } else {
+      courses[course] = [instructor.name];
+    }
+  }
+  return courses;
 };
 
 console.log(organizeInstructors([
