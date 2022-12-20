@@ -21,12 +21,8 @@ const makeCase = function(input, style) {
     }
     finalString = newString;
   };
-  const snake = function(string) {
-    finalString = string.replaceAll(' ', '_').toLowerCase();
-  };
-  const kebab = function(string) {
-    finalString = string.replaceAll(' ', '-').toLowerCase();
-  };
+  const snake = string => finalString = string.replaceAll(' ', '_').toLowerCase();
+  const kebab = string => finalString = string.replaceAll(' ', '-').toLowerCase();
   const title = function(string) {
     string = string.toLowerCase().split(' ');
     for (let i = 0; i < string.length; i++) {
@@ -56,12 +52,8 @@ const makeCase = function(input, style) {
     }
     finalString = newString;
   };
-  const upper = function(string) {
-    finalString = string.toUpperCase();
-  };
-  const lower = function(string) {
-    finalString = string.toLowerCase();
-  };
+  const upper = string => finalString = string.toUpperCase();
+  const lower = string => finalString = string.toLowerCase();
   for (let type of caseOrder) {
     if (style.includes(type)) {
       switch (type) {
